@@ -1,3 +1,5 @@
+import time
+
 from pytest_playwright.pytest_playwright import browser
 from playwright.sync_api import Page
 
@@ -15,5 +17,8 @@ def test_playwrightShortcut(page:Page):
 
 def test_coreLocators(page:Page):
     page.goto("https://rahulshettyacademy.com/loginpagePractise/")
-
-#teścik githuba!
+    page.get_by_label("Username:").fill("rahulshettyacademy")
+    page.get_by_label("Password:").fill("learning")
+    page.get_by_role("combobox").select_option("teach")
+    page.locator("#terms").check()
+    page.get_by_role("button", name = "Sign In").click()
