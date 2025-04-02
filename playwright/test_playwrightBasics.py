@@ -15,3 +15,5 @@ def test_playwrightShortcut(page:Page):
 
 def test_coreLocators(page:Page):
     page.goto("https://rahulshettyacademy.com/loginpagePractise/")
+
+#teścik githuba!
