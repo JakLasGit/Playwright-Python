@@ -3,6 +3,7 @@ from playwright.sync_api import Page, expect
 
 def test_UIValidationDynamicSctipt(page:Page):
     #iphoneX and Nokia Edge - verify 2 items are showing in cart.
+    #select_option, filter, check, click, to_have_count
     page.goto("https://rahulshettyacademy.com/loginpagePractise/")
     page.get_by_label("Username:").fill("rahulshettyacademy")
     page.get_by_label("Password:").fill("learning")
@@ -25,6 +26,7 @@ def test_childWindowHandle(page:Page):
     with page.expect_popup() as childPage_info:
         page.locator(".blinkingText").click()
         childPage = childPage_info.value
+        #extracting part of the string and asserting
         text = childPage.locator(".red").text_content()
         text_split = text.split("at")
         email = text_split[1].strip().split(" ")[0]

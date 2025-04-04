@@ -15,7 +15,7 @@ def test_playwrightBasics(playwright, browser):
 def test_playwrightShortcut(page:Page):
     page.goto("https://rahulshettyacademy.com")
 
-
+#get_by_label, get_by_role, get_by_text, locator
 def test_coreLocators(page:Page):
     page.goto("https://rahulshettyacademy.com/loginpagePractise/")
     page.get_by_label("Username:").fill("rahulshettyacademy")
