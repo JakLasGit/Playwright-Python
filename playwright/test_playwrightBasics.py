@@ -1,5 +1,3 @@
-import time
-
 from pytest_playwright.pytest_playwright import browser
 from playwright.sync_api import Page, expect, Playwright
 

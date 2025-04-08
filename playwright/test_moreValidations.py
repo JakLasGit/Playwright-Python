@@ -43,3 +43,4 @@ def test_riceCheck(page:Page):
 
     riceRow = page.locator("tr").filter(has_text="Rice")
     expect(riceRow.locator("td").nth(priceColValue)).to_have_text("37")
+    
